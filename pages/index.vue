@@ -1,10 +1,21 @@
 <template>
-  <div>
-    <ul class="navigation-menu">
-      <li><NuxtLink to="/game">Start Game</NuxtLink></li>
-      <li><NuxtLink to="/leaderboard">Leaderboard</NuxtLink></li>
-      <li><NuxtLink to="/exit">Exit Game</NuxtLink></li>
-    </ul>
+  <div id="canvas">
+    <div id="deep-space">
+
+      <div class="frame1"> 
+        <img src="https://www.logolynx.com/images/logolynx/7f/7fe85fb6677eaf8d18c3511c3fcaad79.png">
+      </div> 
+
+      <div class="frame">
+
+        <div class="btn-group">
+          <button class="button" type="button"><NuxtLink to="/game" style="text-decoration: none; color: inherit;"><h1>START GAME</h1></NuxtLink></button><br>
+          <button class="button" type="button"><NuxtLink to="/leaderboard" style="text-decoration: none; color: inherit;"><h2>LEADER BOARD</h2></NuxtLink></button><br>
+          <button class="button" type="button"><NuxtLink to="/exit" style="text-decoration: none; color: inherit;"><h1>EXIT</h1></NuxtLink></button>
+        </div>    
+
+      </div>
+  </div>
   </div>
 </template>
 
@@ -12,37 +23,52 @@
 </script>
 
 <style scoped>
-.navigation-menu {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0;
-  margin: 20px 0;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.frame {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+  border: 3px solid transparent;
+  background-size: cover;
+  border-radius: 30px;
+  position: relative;
+  top: -5rem;
+  z-index: -1;
 }
 
-.navigation-menu li {
-  padding: 10px 20px;
+img {
+    height: 200px;
+    width: 700px;
+    text-align: center;
+    margin: auto;
+}
+.frame1 {
+    text-align: center;
+    margin: auto;
+    z-index: 10;
+    margin-top: 35px;
 }
 
-.navigation-menu li:hover {
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.button {
+  text-align: middle;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: transparent;
+  text-shadow: #000000 0px 0px 5px, #FFF 0px 0px 10px;
+  border-color: transparent;
+  color: #f3f3f8;
+  font-size: 16px;
 }
-
-.navigation-menu li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+.button:hover{
+  border: 3px double #FF4294;
+  border-radius: 8px;
+  background-color: #ff429434;
 }
-
-.navigation-menu li a:hover {
-  color: #fff;
-  text-decoration: none;
+.btn-group {
+    margin-top: 80px;
 }
 </style>
